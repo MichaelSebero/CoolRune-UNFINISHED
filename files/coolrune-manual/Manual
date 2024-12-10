@@ -273,6 +273,8 @@
  
  . sort-by-filetype-r
  
+ . sort-by-title
+ 
  . sort-by-year
 
 ..................................................................................................................................................
@@ -460,16 +462,8 @@
 
   . audio-frequency-tools
   
-  - This command lets you generate and detect audio frequencies.
+  - This command lets you generate, detect audio frequencies and much more.
   
-..................................................................................................................................................
-
- / FIX CURSOR /
- 
- . fix-cursor
- 
- - This command frees your cursor if it's stuck
-
 ..................................................................................................................................................
 
  / FIX CORRUPT /
@@ -480,9 +474,9 @@
 
 ..................................................................................................................................................
 
- / REINSTALL ALL /
+ / REINSTALL /
  
- . reinstall-all
+ . reinstall
 
  - This command reinstalls all packages in the system.
 

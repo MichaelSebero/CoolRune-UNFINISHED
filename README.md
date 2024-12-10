@@ -15,7 +15,7 @@ https://github.com/CachyOS/linux-cachyos
 
 ## Security Features 
 	
-. A Lynis system hardness rating of 76.
+. A Lynis system hardness rating of 78.
 	
 . System hardening tweaks via Linux Hardening Script.
 	
@@ -23,13 +23,13 @@ https://github.com/Michael-Sebero/Linux-Hardening-Script
 	
 . MAC address randomization on boot.
 	
-. Antivirus software | ClamAV and Chkrootkit.
+. Antivirus software (ClamAV and Chkrootkit)
 	
 . A custom version of LibreWolf that's more secure and lighter than Brave.
 
 https://github.com/Michael-Sebero/Vanguard-Browser
 	
-. DNS traffic encryption via DNSCrypt.
+. Mullvad DNS traffic encryption via DNSCrypt.
 	
 . Pre-configurated AppArmor, USBGuard, UFW and Fail2Ban.
 	
@@ -42,6 +42,8 @@ https://github.com/Michael-Sebero/Archivist-Tools
 https://github.com/Michael-Sebero/Document-Tools
 	
 https://github.com/Michael-Sebero/Media-Tools
+	
+https://github.com/Michael-Sebero/Audio-Frequency-Tools
 	
 https://github.com/Michael-Sebero/Productivity-Mode
 	
@@ -59,7 +61,7 @@ https://raw.githubusercontent.com/Michael-Sebero/CoolRune/main/files/coolrune-ma
 	
 https://github.com/Michael-Sebero/Fix-Arch-Linux
 	
-. Pre-configured PipeWire audio.
+. Optional pre-configured PipeWire audio profiles.
 	
 . Repo package searching.
 	
@@ -71,5 +73,5 @@ https://github.com/Michael-Sebero/Arch-Package-Dictionary
 ## Donations and Contacts
 PayPal: https://www.paypal.com/donate/?cmd=_donations&business=YYGU9JWJEE2AG
 
-My Website: https://greenlightsuccess.webflow.io
+Email: michaelsebero@disroot.org
 
