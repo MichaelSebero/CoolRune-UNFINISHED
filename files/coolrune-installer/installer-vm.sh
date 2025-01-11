@@ -68,7 +68,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # HARDENING SCRIPT
-cd /-CoolRune-/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
 
 # LAST COMMANDS
 chmod 777 -R /home/$USER && mv /etc/profile{,.old} && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -97,7 +97,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # HARDENING SCRIPT
-cd /-CoolRune-/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
 
 # LAST COMMANDS
 chmod 777 -R /home/$USER && mv /etc/profile{,.old} && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -126,7 +126,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # HARDENING SCRIPT
-cd /-CoolRune-/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
 
 # LAST COMMANDS
 chmod 777 -R /home/$USER && mv /etc/profile{,.old} && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -155,7 +155,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # HARDENING SCRIPT
-cd /-CoolRune-/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
 
 # LAST COMMANDS
 chmod 777 -R /home/$USER && mv /etc/profile{,.old} && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
