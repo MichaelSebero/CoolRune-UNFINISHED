@@ -39,14 +39,14 @@ pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com; pacman-
 
 # COOLRUNE CHOICE SELECTION
 echo "Select a CoolRune Variant"
-echo "1. CoolRune-AMD"
+echo "1. CoolRune-AMD-DESKTOP"
 echo "2. CoolRune-AMD-LAPTOP"
-echo "3. CoolRune-INTEL"
+echo "3. CoolRune-INTEL-DESKTOP"
 echo "4. CoolRune-INTEL-LAPTOP"
 echo "5. CoolRune-NVIDIA-OPENSOURCE"
 echo "6. CoolRune-NVIDIA-PROPRIETARY"
 
-read -p "Enter your choice (1, 2, 3 or 4): " choice
+read -p "Enter your choice (1-6): " choice
 
 ### AMD CHOICE ###
 if [ "$choice" = "1" ]; then
@@ -78,7 +78,7 @@ chmod 777 -R /home/$USER && mv /etc/profile{,.old} && grub-install && update-gru
 
 
 ### AMD LAPTOP CHOICE ###
-if [ "$choice" = "2" ]; then
+elif [ "$choice" = "2" ]; then
 
 # FIRST COMMANDS AND COOLRUNE IMPORT
 killall xfce4-screensaver && pacman -Sy --noconfirm --needed p7zip git && mkdir /home/coolrune-files/ && git clone https://github.com/Michael-Sebero/CoolRune /home/coolrune-files/ && cd /home/coolrune-files/files/coolrune-packages/ && 7z e coolrune-pacman-1.7z -o/etc/ -y && pacman -Sy --noconfirm artix-archlinux-support && pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' && 7z e coolrune-pacman-2.7z -o/etc/ -y && chmod 755 /etc/pacman.conf && pacman-key --populate archlinux artix && retry_pacman 5 pacman -Syyu --noconfirm --needed && mv /home/coolrune-files/files/coolrune-manual/Manual /home/$USER/Desktop/ &&
