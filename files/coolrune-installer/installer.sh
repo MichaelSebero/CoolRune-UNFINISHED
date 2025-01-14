@@ -39,12 +39,12 @@ pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com; pacman-
 
 # COOLRUNE CHOICE SELECTION
 echo "Select a CoolRune Variant"
-echo "1. CoolRune-AMD-DESKTOP"
-echo "2. CoolRune-AMD-LAPTOP"
-echo "3. CoolRune-INTEL-DESKTOP"
-echo "4. CoolRune-INTEL-LAPTOP"
-echo "5. CoolRune-NVIDIA-OPENSOURCE"
-echo "6. CoolRune-NVIDIA-PROPRIETARY"
+echo "1. AMD-DESKTOP"
+echo "2. AMD-LAPTOP"
+echo "3. INTEL-DESKTOP"
+echo "4. INTEL-LAPTOP"
+echo "5. NVIDIA-OPENSOURCE-DESKTOP"
+echo "6. NVIDIA-PROPRIETARY-DESKTOP"
 
 read -p "Enter your choice (1-6): " choice
 
@@ -158,7 +158,7 @@ chmod 777 -R /home/$USER && mv /etc/profile{,.old} && grub-install && update-gru
 
 
 
-### NVIDIA OPENSOURCE CHOICE ###
+### NVIDIA OPENSOURCE DESKTOP CHOICE ###
 elif [ "$choice" = "5" ]; then
 
 # FIRST COMMANDS AND COOLRUNE IMPORT
@@ -187,7 +187,7 @@ chmod 777 -R /home/$USER && mv /etc/profile{,.old} && grub-install && update-gru
 
 
 
-### NVIDIA PROPRIETARY CHOICE ###
+### NVIDIA PROPRIETARY DESKTOP CHOICE ###
 elif [ "$choice" = "6" ]; then
 
 # FIRST COMMANDS AND COOLRUNE IMPORT
