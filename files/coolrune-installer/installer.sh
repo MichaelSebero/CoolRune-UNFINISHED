@@ -48,7 +48,7 @@ echo "6. NVIDIA-PROPRIETARY-DESKTOP"
 
 read -p "Enter your choice (1-6): " choice
 
-### AMD DEKSTOP CHOICE ###
+### AMD DESKTOP CHOICE ###
 if [ "$choice" = "1" ]; then
 
 # FIRST COMMANDS AND COOLRUNE IMPORT
