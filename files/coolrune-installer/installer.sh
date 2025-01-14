@@ -64,7 +64,7 @@ retry_pacman 5 pacman -S --noconfirm --needed --ignore=vlc,vlc-git lib32-artix-a
 flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
 
 # COOLRUNE INSTALL
-7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d /y && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload && grub-mkconfig -o /boot/grub/grub.cfg &&
+7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload && grub-mkconfig -o /boot/grub/grub.cfg &&
 
 # CREATE GAMEMODE GROUP
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
