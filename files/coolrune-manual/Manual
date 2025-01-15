@@ -236,111 +236,18 @@
  / ARCHIVIST TOOLS COMMANDS /
  
  > https://github.com/Michael-Sebero/Archivist-Tools
- 
- . archivist-tools
- 
- OR
- 
- . change-hash
- 
- . change-hash-r
- 
- . delete-duplicate
- 
- . delete-duplicate-r
- 
- . delete-empty-folders
- 
- . delete-filename-keyword
- 
- . delete-filename-keyword-r
- 
- . empty-directory-contents
- 
- . give-random-name
- 
- . give-random-name-r
- 
- . mass-uppercase
- 
- . mass-uppercase-r
- 
- . rename-detailed-files
- 
- . sort-by-file-format
- 
- . sort-by-filetype
- 
- . sort-by-filetype-r
- 
- . sort-by-title
- 
- . sort-by-year
 
 ..................................................................................................................................................
 
  / DOCUMENT TOOLS COMMANDS /
  
  > https://github.com/Michael-Sebero/Document-Tools
-
- . document-tools
- 
- OR
- 
- . compare-documents
- 
- . duplicate-line-remover
- 
- . find-word
-  
- . find-word-archive
- 
- . keyword-line-extractor
- 
- . keyword-line-extractor-r
- 
- . replace-keyword
- 
- . replace-keyword-r
  
 ..................................................................................................................................................
 
  / MEDIA TOOLS COMMANDS /
  
  > https://github.com/Michael-Sebero/Media-Tools
- 
- . media-tools
- 
- OR 
- 
- . change-volume
- 
- . compare-audio
- 
- . convert-to-opus
- 
- . generate-album-sections
- 
- . lossless-separator
- 
- . mass-crop-images
- 
- . mass-thumbnail
- 
- . remove-audio
- 
- . rotate-video
- 
- . sort-by-album
- 
- . sort-by-artist
- 
- . sort-by-genre
- 
- . sort-by-resolution
- 
- . view-metadata
-
  
 ..................................................................................................................................................
 
@@ -375,14 +282,6 @@
  - This command converts a Linux directory into to a Wine directory.
  
  - Example: home/frank/folder > z:\home\frank\folder\
- 
-..................................................................................................................................................
-
- / RANDOM SONG /
- 
- . random-song
-
- - This command plays a random song from a given directory.
  
 ..................................................................................................................................................
 
