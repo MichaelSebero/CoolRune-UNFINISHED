@@ -15,7 +15,7 @@ https://github.com/CachyOS/linux-cachyos
 
 ## Security Features 
 	
-. A Lynis system hardness rating of 78.
+. A Lynis system hardness rating of 80.
 	
 . System hardening tweaks via Linux Hardening Script.
 	
