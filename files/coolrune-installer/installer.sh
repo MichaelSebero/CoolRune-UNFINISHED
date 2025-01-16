@@ -73,7 +73,7 @@ groupadd gamemode && usermod -aG gamemode $(whoami) &&
 chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
 
 # LAST COMMANDS
 mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -102,7 +102,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 037 &&
 
 # LAST COMMANDS
 mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -134,7 +134,7 @@ chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
 
 # LAST COMMANDS
 mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -163,7 +163,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 037 &&
 
 # LAST COMMANDS
 mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -195,7 +195,7 @@ groupadd gamemode && usermod -aG gamemode $(whoami) &&
 chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
 
 # LAST COMMANDS
 mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
@@ -227,7 +227,7 @@ groupadd gamemode && usermod -aG gamemode $(whoami) &&
 chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
 
 # LAST COMMANDS
 mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
