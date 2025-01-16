@@ -69,11 +69,14 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 # CREATE GAMEMODE GROUP
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
+# RESET PERMISSIONS
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
+
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
 
 # LAST COMMANDS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
+mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
 
 
 
@@ -95,11 +98,14 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles-laptop.7z -o/home/$USER/ -y && unzip -o coolrune-root-laptop.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload && grub-mkconfig -o /boot/grub/grub.cfg &&
 
+# RESET PERMISSIONS
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
+
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
 
 # LAST COMMANDS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
+mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
 
 
 
@@ -121,14 +127,17 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload && grub-mkconfig -o /boot/grub/grub.cfg &&
 
+# RESET PERMISSIONS
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
+
 # CREATE GAMEMODE GROUP
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
 
 # LAST COMMANDS
-chmod -R 777 /home/$USER && chmod -R 755 /etc && mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
+mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
 
 
 
@@ -150,11 +159,14 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles-laptop.7z -o/home/$USER/ -y && unzip -o coolrune-root-laptop.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload && grub-mkconfig -o /boot/grub/grub.cfg &&
 
+# RESET PERMISSIONS
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
+
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
 
 # LAST COMMANDS
-chmod -R 777 /home/$USER && chmod -R 755 /etc && mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
+mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
 
 
 
@@ -179,11 +191,14 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 # CREATE GAMEMODE GROUP
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
+# RESET PERMISSIONS
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
+
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
 
 # LAST COMMANDS
-chmod -R 777 /home/$USER && chmod -R 755 /etc && mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
+mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
 
 
 
@@ -208,10 +223,13 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 # CREATE GAMEMODE GROUP
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
+# RESET PERMISSIONS
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc &&
+
 # HARDENING SCRIPT
-cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / &&
+cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 0027 &&
 
 # LAST COMMANDS
-chmod -R 777 /home/$USER && chmod -R 755 /etc && mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
+mv /etc/profile{,.old} && grub-install && update-grub && rm -rf /home/coolrune-files/ && echo -e "\e[1mCoolRune has been successfully installed\e[0m" && reboot
 fi
 '
