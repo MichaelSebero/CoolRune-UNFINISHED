@@ -329,10 +329,6 @@
  
  . format-to-xfs
  
- . format-to-xfs-e
- 
- - These two commands format a drive to XFS, the -e variant formats the drive with encrypted XFS. 
- 
  - After formatting adjust the permissions of the newly formatted drive to sudo chmod 777 [ /dev/formatteddrive ]
 
 ..................................................................................................................................................
@@ -340,10 +336,6 @@
  / FORMAT TO ZFS /
  
  . format-to-zfs
- 
- . format-to-zfs-e
-
- - These two commands format a drive to ZFS, the -e variant formats the drive with encrypted ZFS. 
  
  - After formatting adjust the permissions of the newly formatted drive to sudo chmod 777 [ /dev/formatteddrive ]
  
