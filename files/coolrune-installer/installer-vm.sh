@@ -61,7 +61,7 @@ pacman -Rdd --noconfirm linux linux-headers pulseaudio pulseaudio-alsa pulseaudi
 retry_pacman 5 pacman -S --noconfirm --needed --ignore=vlc,vlc-git lib32-artix-archlinux-support base-devel unzip xorg-xrandr unrar flatpak kate librewolf python-pip tmux vulkan-icd-loader lib32-vulkan-icd-loader liferea ksnip kcalc font-manager gwenview gimp gamemode lib32-gamemode fail2ban fail2ban-s6 okular dnscrypt-proxy dnscrypt-proxy-s6 apparmor apparmor-s6 bleachbit blueman bluez-s6 konsole catfish clamav clamav-s6 ark gufw mugshot macchanger networkmanager networkmanager-s6 nm-connection-editor wine-ge-custom wine-mono winetricks ufw-s6 redshift steam lynis element-desktop rkhunter paru lib32-mesa lib32-mesa-utils bottles appimagelauncher opendoas linux-cachyos linux-cachyos-headers mate-system-monitor lightdm-gtk-greeter-settings downgrade libreoffice pipewire-pulse pipewire-alsa wireplumber wine-gecko rust python-psutil python-dateutil python-xlib python-pyaudio python-pipenv usbguard usbguard-s6 hunspell-en_us vkbasalt lib32-vkbasalt chkrootkit python-matplotlib python-tqdm python-pillow python-mutagen wget noto-fonts-emoji xfce4-panel-profiles poetry tauon-music-box yt-dlp pyenv lxsession freetube python-magic python-piexif alsa-utils lib32-vulkan-radeon expect inotify-tools preload python-sounddevice python-moviepy python-brotli python-websockets cpupower cpupower-s6 python-librosa python-audioread nix ccache &&
 
 # FLATPAK PACKAGES
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader com.usebottles.bottles &&
 
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload &&
@@ -70,7 +70,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # RESET PERMISSIONS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf &&
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf && chmod -R 777 /home/$USER/.var/ && 
 
 # HARDENING SCRIPT
 cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
@@ -93,13 +93,13 @@ pacman -Rdd --noconfirm linux linux-headers pulseaudio pulseaudio-alsa pulseaudi
 retry_pacman 5 pacman -S --noconfirm --needed --ignore=vlc,vlc-git lib32-artix-archlinux-support base-devel unzip xorg-xrandr unrar flatpak kate librewolf python-pip tmux vulkan-icd-loader lib32-vulkan-icd-loader liferea ksnip kcalc font-manager gwenview gimp fail2ban fail2ban-s6 okular dnscrypt-proxy dnscrypt-proxy-s6 apparmor apparmor-s6 bleachbit blueman bluez-s6 konsole catfish clamav clamav-s6 ark gufw mugshot macchanger networkmanager networkmanager-s6 nm-connection-editor wine-ge-custom wine-mono winetricks ufw-s6 redshift steam lynis element-desktop rkhunter paru lib32-mesa lib32-mesa-utils bottles appimagelauncher opendoas linux-cachyos-hardened linux-cachyos-hardened-headers mate-system-monitor lightdm-gtk-greeter-settings downgrade libreoffice pipewire-pulse pipewire-alsa wireplumber wine-gecko rust python-psutil python-dateutil python-xlib python-pyaudio python-pipenv usbguard usbguard-s6 hunspell-en_us vkbasalt lib32-vkbasalt chkrootkit python-matplotlib python-tqdm python-pillow python-mutagen wget noto-fonts-emoji xfce4-panel-profiles poetry tauon-music-box yt-dlp pyenv lxsession freetube python-magic python-piexif alsa-utils lib32-vulkan-radeon expect inotify-tools preload python-sounddevice python-moviepy python-brotli python-websockets cpupower cpupower-s6 python-librosa python-audioread nix ccache &&
 
 # FLATPAK PACKAGES
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader com.usebottles.bottles &&
 
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles-laptop.7z -o/home/$USER/ -y && unzip -o coolrune-root-laptop.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload &&
 
 # RESET PERMISSIONS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf &&
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf && chmod -R 777 /home/$USER/.var/ &&
 
 # HARDENING SCRIPT
 cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 037 &&
@@ -122,13 +122,13 @@ pacman -Rdd --noconfirm linux linux-headers pulseaudio pulseaudio-alsa pulseaudi
 retry_pacman 5 pacman -S --noconfirm --needed --ignore=vlc,vlc-git lib32-artix-archlinux-support base-devel unzip xorg-xrandr unrar flatpak kate librewolf python-pip tmux vulkan-icd-loader lib32-vulkan-icd-loader liferea ksnip kcalc font-manager gwenview gimp gamemode lib32-gamemode fail2ban fail2ban-s6 okular dnscrypt-proxy dnscrypt-proxy-s6 apparmor apparmor-s6 bleachbit blueman bluez-s6 konsole catfish clamav clamav-s6 ark gufw mugshot macchanger networkmanager networkmanager-s6 nm-connection-editor wine-ge-custom wine-mono winetricks ufw-s6 redshift steam lynis element-desktop rkhunter paru lib32-mesa lib32-mesa-utils bottles appimagelauncher opendoas linux-cachyos linux-cachyos-headers mate-system-monitor lightdm-gtk-greeter-settings downgrade libreoffice pipewire-pulse pipewire-alsa wireplumber wine-gecko rust python-psutil python-dateutil python-xlib python-pyaudio python-pipenv usbguard usbguard-s6 hunspell-en_us vkbasalt lib32-vkbasalt chkrootkit python-matplotlib python-tqdm python-pillow python-mutagen wget noto-fonts-emoji xfce4-panel-profiles poetry tauon-music-box yt-dlp pyenv lxsession freetube python-magic python-piexif alsa-utils intel-media-driver lib32-vulkan-intel expect inotify-tools preload python-sounddevice python-moviepy python-brotli python-websockets cpupower cpupower-s6 python-librosa python-audioread nix ccache &&
 
 # FLATPAK PACKAGES
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader com.usebottles.bottles &&
 
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload &&
 
 # RESET PERMISSIONS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf &&
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf && chmod -R 777 /home/$USER/.var/ &&
 
 # CREATE GAMEMODE GROUP
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
@@ -154,13 +154,13 @@ pacman -Rdd --noconfirm linux linux-headers pulseaudio pulseaudio-alsa pulseaudi
 retry_pacman 5 pacman -S --noconfirm --needed --ignore=vlc,vlc-git lib32-artix-archlinux-support base-devel unzip xorg-xrandr unrar flatpak kate librewolf python-pip tmux vulkan-icd-loader lib32-vulkan-icd-loader liferea ksnip kcalc font-manager gwenview gimp fail2ban fail2ban-s6 okular dnscrypt-proxy dnscrypt-proxy-s6 apparmor apparmor-s6 bleachbit blueman bluez-s6 konsole catfish clamav clamav-s6 ark gufw mugshot macchanger networkmanager networkmanager-s6 nm-connection-editor wine-ge-custom wine-mono winetricks ufw-s6 redshift steam lynis element-desktop rkhunter paru lib32-mesa lib32-mesa-utils bottles appimagelauncher opendoas linux-cachyos-hardened linux-cachyos-hardened-headers mate-system-monitor lightdm-gtk-greeter-settings downgrade libreoffice pipewire-pulse pipewire-alsa wireplumber wine-gecko rust python-psutil python-dateutil python-xlib python-pyaudio python-pipenv usbguard usbguard-s6 hunspell-en_us vkbasalt lib32-vkbasalt chkrootkit python-matplotlib python-tqdm python-pillow python-mutagen wget noto-fonts-emoji xfce4-panel-profiles poetry tauon-music-box yt-dlp pyenv lxsession freetube python-magic python-piexif alsa-utils intel-media-driver lib32-vulkan-intel expect inotify-tools preload python-sounddevice python-moviepy python-brotli python-websockets cpupower cpupower-s6 python-librosa python-audioread nix ccache &&
 
 # FLATPAK PACKAGES
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader com.usebottles.bottles &&
 
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles-laptop.7z -o/home/$USER/ -y && unzip -o coolrune-root-laptop.zip -d / && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload &&
 
 # RESET PERMISSIONS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf &&
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf && chmod -R 777 /home/$USER/.var/ &&
 
 # HARDENING SCRIPT
 cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 037 &&
@@ -183,7 +183,7 @@ pacman -Rdd --noconfirm linux linux-headers pulseaudio pulseaudio-alsa pulseaudi
 retry_pacman 5 pacman -S --noconfirm --needed --ignore=nvidia-390xx-utils,lib32-nvidia-390xx-utils,vlc,vlc-git lib32-artix-archlinux-support base-devel unzip xorg-xrandr unrar flatpak kate librewolf python-pip tmux vulkan-icd-loader lib32-vulkan-icd-loader liferea ksnip kcalc font-manager gwenview gimp gamemode lib32-gamemode fail2ban fail2ban-s6 okular dnscrypt-proxy dnscrypt-proxy-s6 apparmor apparmor-s6 bleachbit blueman bluez-s6 konsole catfish clamav clamav-s6 ark gufw mugshot macchanger networkmanager networkmanager-s6 nm-connection-editor wine-ge-custom wine-mono winetricks ufw-s6 redshift steam lynis element-desktop rkhunter paru linux-cachyos-nvidia-open nvidia-utils nvidia-utils-s6 lib32-nvidia-utils nvidia-settings bottles appimagelauncher opendoas linux-cachyos linux-cachyos-headers mate-system-monitor lightdm-gtk-greeter-settings downgrade libreoffice pipewire-pulse pipewire-alsa wireplumber wine-gecko rust python-psutil python-dateutil python-xlib python-pyaudio python-pipenv usbguard usbguard-s6 hunspell-en_us vkbasalt lib32-vkbasalt chkrootkit python-matplotlib python-tqdm python-pillow python-mutagen wget noto-fonts-emoji xfce4-panel-profiles poetry tauon-music-box yt-dlp pyenv lxsession freetube python-magic python-piexif alsa-utils expect inotify-tools preload python-sounddevice python-moviepy python-brotli python-websockets cpupower cpupower-s6 python-librosa python-audioread nix ccache &&
 
 # FLATPAK PACKAGES
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader com.usebottles.bottles &&
 
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d / && 7z x coolrune-nvidia-patch.7z -o/ -y && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload &&
@@ -192,7 +192,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # RESET PERMISSIONS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf &&
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf && chmod -R 777 /home/$USER/.var/ &&
 
 # HARDENING SCRIPT
 cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
@@ -215,7 +215,7 @@ pacman -Rdd --noconfirm linux linux-headers pulseaudio pulseaudio-alsa pulseaudi
 retry_pacman 5 pacman -S --noconfirm --needed --ignore=nvidia-390xx-utils,lib32-nvidia-390xx-utils,vlc,vlc-git lib32-artix-archlinux-support base-devel unzip xorg-xrandr unrar flatpak kate librewolf python-pip tmux vulkan-icd-loader lib32-vulkan-icd-loader liferea ksnip kcalc font-manager gwenview gimp gamemode lib32-gamemode fail2ban fail2ban-s6 okular dnscrypt-proxy dnscrypt-proxy-s6 apparmor apparmor-s6 bleachbit blueman bluez-s6 konsole catfish clamav clamav-s6 ark gufw mugshot macchanger networkmanager networkmanager-s6 nm-connection-editor wine-ge-custom wine-mono winetricks ufw-s6 redshift steam lynis element-desktop rkhunter paru linux-cachyos-nvidia nvidia-utils nvidia-utils-s6 lib32-nvidia-utils nvidia-settings bottles appimagelauncher opendoas linux-cachyos linux-cachyos-headers mate-system-monitor lightdm-gtk-greeter-settings downgrade libreoffice pipewire-pulse pipewire-alsa wireplumber wine-gecko rust python-psutil python-dateutil python-xlib python-pyaudio python-pipenv usbguard usbguard-s6 hunspell-en_us vkbasalt lib32-vkbasalt chkrootkit python-matplotlib python-tqdm python-pillow python-mutagen wget noto-fonts-emoji xfce4-panel-profiles poetry tauon-music-box yt-dlp pyenv lxsession freetube python-magic python-piexif alsa-utils expect inotify-tools preload python-sounddevice python-moviepy python-brotli python-websockets cpupower cpupower-s6 python-librosa python-audioread nix ccache &&
 
 # FLATPAK PACKAGES
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader &&
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo && flatpak install -y org.gnome.seahorse.Application/x86_64/stable org.kde.haruna org.jdownloader.JDownloader com.usebottles.bottles &&
 
 # COOLRUNE INSTALL
 7z x coolrune-dotfiles.7z -o/home/$USER/ -y && unzip -o coolrune-root.zip -d / && 7z x coolrune-nvidia-patch.7z -o/ -y && s6-service add default apparmor && s6-service add default fail2ban && s6-service add default NetworkManager && s6-service add default dnscrypt-proxy && s6-service add default ufw && s6-service add default cpupower && rm /etc/s6/adminsv/default/contents.d/connmand && pacman -Rdd --noconfirm vlc-luajit connman connman-s6 connman-gtk && s6-db-reload &&
@@ -224,7 +224,7 @@ flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatp
 groupadd gamemode && usermod -aG gamemode $(whoami) &&
 
 # RESET PERMISSIONS
-chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf &&
+chmod -R 755 /home/$USER && chmod -R 777 /home/$USER/.librewolf/ && chmod -R 755 /etc && chmod -R 755 /usr/share/backgrounds && chmod -R 755 /usr/share/icons && chmod -R 755 /usr/share/pictures && chmod -R 755 /usr/share/themes && chmod -R 777 /home/$USER/.config/qBittorrent && chmod -R 777 /home/$USER/.config/bleachbit && chmod 644 /etc/udev/udev.conf && chmod -R 777 /home/$USER/.var/ &&
 
 # HARDENING SCRIPT
 cd /CoolRune/Programs/Hardening-Script/ && sh hardening-script.sh && cd / && umask 027 &&
